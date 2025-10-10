@@ -1,0 +1,26 @@
+<script>
+    // Example JSON text
+const jsonText = `{
+  "name": "Alan T Eapen",
+  "email": "alan@example.com",
+  "message": "Hello, this is a test message."
+}`;
+
+// Named arrow function
+const handleMessage = () => {
+  try {
+    // Convert JSON to JavaScript object
+    const data = JSON.parse(jsonText);
+
+    // Print message
+    console.log(`Message received from ${data.name}`);
+  } catch (error) {
+    // Show error if JSON is invalid
+    console.error("Error: Invalid JSON data!", error.message);
+  }
+};
+
+// Run the function
+handleMessage();
+
+</script>

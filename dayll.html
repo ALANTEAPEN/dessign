@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Text Submit Example</title>
+  <style>
+    #output {
+      color: blue;
+      font-size: 18px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Enter Text Example</h2>
+
+  <!-- Form -->
+  <form id="myForm">
+    <input type="text" id="userInput" placeholder="Type something..." required>
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- Paragraph where text will appear -->
+  <p id="output"></p>
+
+  <script>
+    const form = document.getElementById("myForm");
+    const userInput = document.getElementById("userInput");
+    const output = document.getElementById("output");
+
+    // Prevent reload & show text
+    form.addEventListener("submit", (event) => {
+      event.preventDefault(); // stops page reload
+      output.textContent = userInput.value;
+      output.style.color = "blue"; // default color
+    });
+
+    // Hover -> green
+    output.addEventListener("mouseover", () => {
+      output.style.color = "green";
+    });
+
+    // Mouse out -> back to blue
+    output.addEventListener("mouseout", () => {
+      output.style.color = "blue";
+    });
+  </script>
+</body>
+</html>
