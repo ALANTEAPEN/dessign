@@ -1,0 +1,41 @@
+use EventTracker
+db.UpcomingEvents.insertOne({
+  name: "Music Fest",
+  date: new Date(),
+  isFreeEntry: false,
+  ticketPrice: 299.99,
+  performers: ["DJ Max", "Live Band"],
+  location: {
+    city: "Chennai",
+    venue: "Beach Arena"
+  },
+  specialCode: null
+})
+db.UpcomingEvents.insertMany([
+  {
+    name: "Food Carnival",
+    date: new Date("2025-11-15"),
+    isFreeEntry: true,
+    ticketPrice: 0,
+    performers: ["Chef Kumar", "Food Artist Team"],
+    location: {
+      city: "Bangalore",
+      venue: "City Convention Hall"
+    },
+    specialCode: "FOOD2025"
+  },
+  {
+    name: "Tech Expo",
+    date: new Date("2025-12-10"),
+    isFreeEntry: false,
+    ticketPrice: 499.99,
+    performers: ["TechTalks Inc.", "Innovators Hub"],
+    location: {
+      city: "Hyderabad",
+      venue: "Tech Park Arena"
+    },
+    specialCode: "TECHX25"
+  }
+])
+show collections
+db.UpcomingEvents.find().pretty()
