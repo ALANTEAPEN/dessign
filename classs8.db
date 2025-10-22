@@ -1,0 +1,11 @@
+
+use store
+db.posts.createIndex({ author: 1 })
+db.posts.createIndex({ publishedDate: -1 })
+db.posts.getIndexes()
+db.posts.dropIndex({ author: 1 })
+
+db.products.createIndex({ category: 1 })
+db.products.createIndex({ price: -1 })
+db.products.getIndexes()
+db.products.dropIndex({ category: 1 })
