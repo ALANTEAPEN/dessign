@@ -2,6 +2,6 @@ use SchoolLibrary
 db.Books.insertOne({
   title: "Introduction to Science",
   author: "Dr. Smith",
-  available: true
+  available: true})
   show collections
   db.Books.drop()
