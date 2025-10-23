@@ -1,0 +1,4 @@
+use mashupdb
+db.students.createIndex({ mark: 1 })
+db.students.getIndexes()
+db.students.dropIndex({ mark: 1 })
